@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "twitter-favicon",
+    "description": "twitter favicon brdr",
+    "version": "0.0.1",
+    "icons": {},
+    "options_page": "settings/settings.html",
+    "action": {
+        "default_title": "twitter-favicon",
+        "default_popup": "popup/popup.html"
+    },
+    "permissions": [],
+    "host_permissions": [
+    ],
+    "background": {
+        "service_worker": "service-worker.js"
+    },
+    "content_scripts": [{
+        "js": ["foreground.js"],
+        "matches": ["https://twitter.com/*","https://x.com/*"]
+    }]
+}
